@@ -68,16 +68,16 @@ _Create a free ClearInsights account to start using the SDK_
    ```
 
 4. Enter your API Key and Client Secret in `Program.cs`
-   ```js
+   ```cs
     builder.Logging.AddClearInsightsLogger(configuration =>
     {
-    configuration.ApiKey = "{ApiKey}";
-    configuration.Secret = "{Environment Client Secret}";
-    configuration.ApplicationName = "{Application Name}";
+        configuration.ApiKey = "{ApiKey}";
+        configuration.Secret = "{Environment Client Secret}";
+        configuration.ApplicationName = "{Application Name}";
     })
    ```
 5. Use and extend global exception handling
-   ```js
+   ```cs
     //Add to use ClearInsights global error handling.
     //This will automatically catch any unhandled exceptions
     app.UseClearInsightsExceptionHandling(options =>
